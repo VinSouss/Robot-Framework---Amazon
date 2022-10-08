@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.7 on win32)" generated="20221007 15:25:26.131" rpa="false" schemaversion="3">
+<suite id="s1" name="Amazon Testes Gherkin" source="C:\Robot Framework\Curso_Robot\Web_Testing\amazon_testes_gherkin.robot">
+<test id="s1-t1" name="Caso de Testes 01 - Acesso ao menu &quot;Eletronicos&quot;" line="9">
+<kw name="Abrir o navegador" library="amazon_resources" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221007 15:25:26.415" level="INFO">Opening browser 'Chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20221007 15:25:26.415" endtime="20221007 15:25:27.843"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221007 15:25:27.843" endtime="20221007 15:25:27.972"/>
+</kw>
+<status status="PASS" starttime="20221007 15:25:26.414" endtime="20221007 15:25:27.973"/>
+</kw>
+<kw name="Dado que estou na home page da Amazon.com.br" library="amazon_resources">
+<kw name="Acessar a home page do site Amazon.com.br" library="amazon_resources">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20221007 15:25:27.976" level="INFO">Opening url 'https://www.amazon.com.br/'</msg>
+<status status="PASS" starttime="20221007 15:25:27.975" endtime="20221007 15:25:30.473"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>locator=${MENU_ELETRONICOS}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221007 15:25:30.474" endtime="20221007 15:25:30.546"/>
+</kw>
+<status status="PASS" starttime="20221007 15:25:27.974" endtime="20221007 15:25:30.546"/>
+</kw>
+<kw name="Verificar se aparece a frase &quot;Amazon.com.br | Tudo pra você, de A a Z.&quot;" library="amazon_resources" sourcename="Verificar se aparece a frase &quot;${FRASE}&quot;">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>text=${FRASE}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20221007 15:25:30.547" endtime="20221007 15:25:30.570"/>
+</kw>
+<status status="PASS" starttime="20221007 15:25:30.547" endtime="20221007 15:25:30.571"/>
+</kw>
+<status status="PASS" starttime="20221007 15:25:27.974" endtime="20221007 15:25:30.571"/>
+</kw>
+<kw name="Quando acessar o menu &quot;Eletrônicos&quot;" library="amazon_resources">
+<kw name="Entrar no menu &quot;Eletronicos&quot;" library="amazon_resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=${MENU_ELETRONICOS}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221007 15:25:30.572" level="INFO">Clicking element '//a[@href='/Eletronicos-e-Tecnologia/b/?ie=UTF8&amp;node=16209062011&amp;ref_=nav_cs_electronics'][contains(.,'Eletrônicos')]'.</msg>
+<status status="PASS" starttime="20221007 15:25:30.572" endtime="20221007 15:25:31.202"/>
+</kw>
+<status status="PASS" starttime="20221007 15:25:30.571" endtime="20221007 15:25:31.202"/>
+</kw>
+<status status="PASS" starttime="20221007 15:25:30.571" endtime="20221007 15:25:31.202"/>
+</kw>
+<kw name="Então o título da página deve ficar &quot;Eletrônicos e Tecnologia | Amazon.com.br&quot;" library="amazon_resources">
+<kw name="Verificar se o título da página fica &quot;Eletrônicos e Tecnologia | Amazon.com.br&quot;" library="amazon_resources" sourcename="Verificar se o título da página fica &quot;${TITLE}&quot;">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>title=${TITLE}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20221007 15:25:31.234" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=105.0.5195.127)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00BEDF13+2219795]
+	Ordinal0 [0x00B82841+1779777]
+	Ordinal0 [0x00A9423D+803389]
+	Ordinal0 [0x00A7C70A+706314]
+	Ordinal0 [0x00AE1502+1119490]
+	Ordinal0 [0x00AEE8FA+1173754]
+	Ordinal0 [0x00ADE616+1107478]
+	Ordinal0 [0x00AB7F89+950153]
+	Ordinal0 [0x00AB8F56+954198]
+	GetHandleVerifier [0x00EE2CB2+3040210]
+	GetHandleVerifier [0x00ED2BB4+2974420]
+	GetHandleVerifier [0x00C86A0A+565546]
+	GetHandleVerifier [0x00C85680+560544]
+	Ordinal0 [0x00B89A5C+1808988]
+	Ordinal0 [0x00B8E3A8+1827752]
+	Ordinal0 [0x00B8E495+1827989]
+	Ordinal0 [0x00B980A4+1867940]
+	BaseThreadInitThunk [0x75C6FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77AD7B5E+286]
+	RtlGetAppContainerNamedObjectPath [0x77AD7B2E+238]
+</msg>
+<msg timestamp="20221007 15:25:31.286" level="FAIL">Title should have been 'Eletrônicos e Tecnologia | Amazon.com.br' but was 'None'.</msg>
+<status status="FAIL" starttime="20221007 15:25:31.203" endtime="20221007 15:25:31.335"/>
+</kw>
+<status status="FAIL" starttime="20221007 15:25:31.203" endtime="20221007 15:25:31.337"/>
+</kw>
+<status status="FAIL" starttime="20221007 15:25:31.202" endtime="20221007 15:25:31.337"/>
+</kw>
+<kw name="E o texto &quot;Eletrônicos e Tecnologia&quot; deve ser exibido na página" library="amazon_resources">
+<status status="NOT RUN" starttime="20221007 15:25:31.338" endtime="20221007 15:25:31.338"/>
+</kw>
+<kw name="E a categoria &quot;Computadores e Informática&quot; deve ser exibida na página" library="amazon_resources">
+<status status="NOT RUN" starttime="20221007 15:25:31.338" endtime="20221007 15:25:31.339"/>
+</kw>
+<kw name="Fechar o navegador" library="amazon_resources" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20221007 15:25:31.350" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=105.0.5195.127)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00BEDF13+2219795]
+	Ordinal0 [0x00B82841+1779777]
+	Ordinal0 [0x00A9423D+803389]
+	Ordinal0 [0x00A7C70A+706314]
+	Ordinal0 [0x00AE1502+1119490]
+	Ordinal0 [0x00AEE8FA+1173754]
+	Ordinal0 [0x00ADE616+1107478]
+	Ordinal0 [0x00AB7F89+950153]
+	Ordinal0 [0x00AB8F56+954198]
+	GetHandleVerifier [0x00EE2CB2+3040210]
+	GetHandleVerifier [0x00ED2BB4+2974420]
+	GetHandleVerifier [0x00C86A0A+565546]
+	GetHandleVerifier [0x00C85680+560544]
+	Ordinal0 [0x00B89A5C+1808988]
+	Ordinal0 [0x00B8E3A8+1827752]
+	Ordinal0 [0x00B8E495+1827989]
+	Ordinal0 [0x00B980A4+1867940]
+	BaseThreadInitThunk [0x75C6FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77AD7B5E+286]
+	RtlGetAppContainerNamedObjectPath [0x77AD7B2E+238]
+</msg>
+<msg timestamp="20221007 15:25:31.354" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=105.0.5195.127)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00BEDF13+2219795]
+	Ordinal0 [0x00B82841+1779777]
+	Ordinal0 [0x00A9423D+803389]
+	Ordinal0 [0x00A7C70A+706314]
+	Ordinal0 [0x00AE1502+1119490]
+	Ordinal0 [0x00AEE8FA+1173754]
+	Ordinal0 [0x00ADE616+1107478]
+	Ordinal0 [0x00AB7F89+950153]
+	Ordinal0 [0x00AB8F56+954198]
+	GetHandleVerifier [0x00EE2CB2+3040210]
+	GetHandleVerifier [0x00ED2BB4+2974420]
+	GetHandleVerifier [0x00C86A0A+565546]
+	GetHandleVerifier [0x00C85680+560544]
+	Ordinal0 [0x00B89A5C+1808988]
+	Ordinal0 [0x00B8E3A8+1827752]
+	Ordinal0 [0x00B8E495+1827989]
+	Ordinal0 [0x00B980A4+1867940]
+	BaseThreadInitThunk [0x75C6FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77AD7B5E+286]
+	RtlGetAppContainerNamedObjectPath [0x77AD7B2E+238]
+</msg>
+<status status="FAIL" starttime="20221007 15:25:31.340" endtime="20221007 15:25:31.398"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221007 15:25:31.398" endtime="20221007 15:25:33.515"/>
+</kw>
+<status status="FAIL" starttime="20221007 15:25:31.339" endtime="20221007 15:25:33.515">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=105.0.5195.127)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00BEDF13+2219795]
+	Ordinal0 [0x00B82841+1779777]
+	Ordinal0 [0x00A9423D+803389]
+	Ordinal0 [0x00A7C70A+706314]
+	Ordinal0 [0x00AE1502+1119490]
+	Ordinal0 [0x00AEE8FA+1173754]
+	Ordinal0 [0x00ADE616+1107478]
+	Ordinal0 [0x00AB7F89+950153]
+	Ordinal0 [0x00AB8F56+954198]
+	GetHandleVerifier [0x00EE2CB2+3040210]
+	GetHandleVerifier [0x00ED2BB4+2974420]
+	GetHandleVerifier [0x00C86A0A+565546]
+	GetHandleVerifier [0x00C85680+560544]
+	Ordinal0 [0x00B89A5C+1808988]
+	Ordinal0 [0x00B8E3A8+1827752]
+	Ordinal0 [0x00B8E495+1827989]
+	Ordinal0 [0x00B980A4+1867940]
+	BaseThreadInitThunk [0x75C6FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77AD7B5E+286]
+	RtlGetAppContainerNamedObjectPath [0x77AD7B2E+238]
+</status>
+</kw>
+<doc>Esse teste verifica o menu "Eletronicos" do site da Amazon.com.br,
+junto com a categoria Computadores e Informatica</doc>
+<tag>menus_e_categorias</tag>
+<status status="FAIL" starttime="20221007 15:25:26.413" endtime="20221007 15:25:33.516">Title should have been 'Eletrônicos e Tecnologia | Amazon.com.br' but was 'None'.
+
+Also teardown failed:
+NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=105.0.5195.127)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00BEDF13+2219795]
+	Ordinal0 [0x00B82841+1779777]
+	Ordinal0 [0x00A9423D+803389]
+	Ordinal0 [0x00A7C70A+706314]
+	Ordinal0 [0x00AE1502+1119490]
+	Ordinal0 [0x00AEE8FA+1173754]
+	Ordinal0 [0x00ADE616+1107478]
+	Ordinal0 [0x00AB7F89+950153]
+	Ordinal0 [0x00AB8F56+954198]
+	GetHandleVerifier [0x00EE2CB2+3040210]
+	GetHandleVerifier [0x00ED2BB4+2974420]
+	GetHandleVerifier [0x00C86A0A+565546]
+	GetHandleVerifier [0x00C85680+560544]
+	Ordinal0 [0x00B89A5C+1808988]
+	Ordinal0 [0x00B8E3A8+1827752]
+	Ordinal0 [0x00B8E495+1827989]
+	Ordinal0 [0x00B980A4+1867940]
+	BaseThreadInitThunk [0x75C6FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77AD7B5E+286]
+	RtlGetAppContainerNamedObjectPath [0x77AD7B2E+238]
+</status>
+</test>
+<test id="s1-t2" name="Caso de Testes 02 - Pesquisa de um Produtos" line="19">
+<kw name="Abrir o navegador" library="amazon_resources" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221007 15:25:33.520" level="INFO">Opening browser 'Chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20221007 15:25:33.520" endtime="20221007 15:25:34.730"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221007 15:25:34.730" endtime="20221007 15:25:34.854"/>
+</kw>
+<status status="PASS" starttime="20221007 15:25:33.520" endtime="20221007 15:25:34.854"/>
+</kw>
+<kw name="Dado que estou na home page da Amazon.com.br" library="amazon_resources">
+<kw name="Acessar a home page do site Amazon.com.br" library="amazon_resources">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20221007 15:25:34.855" level="INFO">Opening url 'https://www.amazon.com.br/'</msg>
+<status status="PASS" starttime="20221007 15:25:34.855" endtime="20221007 15:25:37.479"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>locator=${MENU_ELETRONICOS}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221007 15:25:37.479" endtime="20221007 15:25:37.514"/>
+</kw>
+<status status="PASS" starttime="20221007 15:25:34.855" endtime="20221007 15:25:37.514"/>
+</kw>
+<kw name="Verificar se aparece a frase &quot;Amazon.com.br | Tudo pra você, de A a Z.&quot;" library="amazon_resources" sourcename="Verificar se aparece a frase &quot;${FRASE}&quot;">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>text=${FRASE}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20221007 15:25:37.514" endtime="20221007 15:25:37.530"/>
+</kw>
+<status status="PASS" starttime="20221007 15:25:37.514" endtime="20221007 15:25:37.530"/>
+</kw>
+<status status="PASS" starttime="20221007 15:25:34.854" endtime="20221007 15:25:37.530"/>
+</kw>
+<kw name="Quando pesquisar pelo produto &quot;Xbox Series S&quot;" library="amazon_resources">
+<kw name="Digitar o nome de produto &quot;Xbox Series S&quot; no campo de pesquisa" library="amazon_resources" sourcename="Digitar o nome de produto &quot;${PRODUTO}&quot; no campo de pesquisa">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>twotabsearchtextbox</arg>
+<arg>${PRODUTO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221007 15:25:37.531" level="INFO">Typing text 'Xbox Series S' into text field 'twotabsearchtextbox'.</msg>
+<status status="PASS" starttime="20221007 15:25:37.531" endtime="20221007 15:25:37.687"/>
+</kw>
+<status status="PASS" starttime="20221007 15:25:37.531" endtime="20221007 15:25:37.687"/>
+</kw>
+<kw name="Clicar no botão de pesquisa" library="amazon_resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=nav-search-submit-button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221007 15:25:37.688" level="INFO">Clicking element 'nav-search-submit-button'.</msg>
+<status status="PASS" starttime="20221007 15:25:37.688" endtime="20221007 15:25:37.807"/>
+</kw>
+<status status="PASS" starttime="20221007 15:25:37.688" endtime="20221007 15:25:37.807"/>
+</kw>
+<status status="PASS" starttime="20221007 15:25:37.530" endtime="20221007 15:25:37.807"/>
+</kw>
+<kw name="Então o título da página deve ficar &quot;Amazon.com.br : Xbox Series S&quot;" library="amazon_resources">
+<kw name="Verificar se o título da página fica &quot;Amazon.com.br : Xbox Series S&quot;" library="amazon_resources" sourcename="Verificar se o título da página fica &quot;${TITLE}&quot;">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>title=${TITLE}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20221007 15:25:38.343" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-11.png"&gt;&lt;img src="selenium-screenshot-11.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20221007 15:25:38.343" level="FAIL">Title should have been 'Amazon.com.br : Xbox Series S' but was ''.</msg>
+<status status="FAIL" starttime="20221007 15:25:37.810" endtime="20221007 15:25:38.344"/>
+</kw>
+<status status="FAIL" starttime="20221007 15:25:37.810" endtime="20221007 15:25:38.345"/>
+</kw>
+<status status="FAIL" starttime="20221007 15:25:37.810" endtime="20221007 15:25:38.345"/>
+</kw>
+<kw name="E um produto da linha &quot;Xbox Series S&quot; deve ser mostrado na página" library="amazon_resources">
+<status status="NOT RUN" starttime="20221007 15:25:38.347" endtime="20221007 15:25:38.347"/>
+</kw>
+<kw name="Fechar o navegador" library="amazon_resources" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20221007 15:25:38.806" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-12.png"&gt;&lt;img src="selenium-screenshot-12.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20221007 15:25:38.348" endtime="20221007 15:25:38.806"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221007 15:25:38.806" endtime="20221007 15:25:41.071"/>
+</kw>
+<status status="PASS" starttime="20221007 15:25:38.348" endtime="20221007 15:25:41.071"/>
+</kw>
+<doc>Esse testes verifica a busca de um produto.</doc>
+<tag>busca_produtos</tag>
+<status status="FAIL" starttime="20221007 15:25:33.519" endtime="20221007 15:25:41.072">Title should have been 'Amazon.com.br : Xbox Series S' but was ''.</status>
+</test>
+<doc>Essa suite testa o site da Amazon.com.br</doc>
+<status status="FAIL" starttime="20221007 15:25:26.132" endtime="20221007 15:25:41.073"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="2" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">busca_produtos</stat>
+<stat pass="0" fail="1" skip="0">menus_e_categorias</stat>
+</tag>
+<suite>
+<stat pass="0" fail="2" skip="0" id="s1" name="Amazon Testes Gherkin">Amazon Testes Gherkin</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20221007 15:25:31.234" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=105.0.5195.127)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00BEDF13+2219795]
+	Ordinal0 [0x00B82841+1779777]
+	Ordinal0 [0x00A9423D+803389]
+	Ordinal0 [0x00A7C70A+706314]
+	Ordinal0 [0x00AE1502+1119490]
+	Ordinal0 [0x00AEE8FA+1173754]
+	Ordinal0 [0x00ADE616+1107478]
+	Ordinal0 [0x00AB7F89+950153]
+	Ordinal0 [0x00AB8F56+954198]
+	GetHandleVerifier [0x00EE2CB2+3040210]
+	GetHandleVerifier [0x00ED2BB4+2974420]
+	GetHandleVerifier [0x00C86A0A+565546]
+	GetHandleVerifier [0x00C85680+560544]
+	Ordinal0 [0x00B89A5C+1808988]
+	Ordinal0 [0x00B8E3A8+1827752]
+	Ordinal0 [0x00B8E495+1827989]
+	Ordinal0 [0x00B980A4+1867940]
+	BaseThreadInitThunk [0x75C6FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77AD7B5E+286]
+	RtlGetAppContainerNamedObjectPath [0x77AD7B2E+238]
+</msg>
+<msg timestamp="20221007 15:25:31.350" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=105.0.5195.127)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00BEDF13+2219795]
+	Ordinal0 [0x00B82841+1779777]
+	Ordinal0 [0x00A9423D+803389]
+	Ordinal0 [0x00A7C70A+706314]
+	Ordinal0 [0x00AE1502+1119490]
+	Ordinal0 [0x00AEE8FA+1173754]
+	Ordinal0 [0x00ADE616+1107478]
+	Ordinal0 [0x00AB7F89+950153]
+	Ordinal0 [0x00AB8F56+954198]
+	GetHandleVerifier [0x00EE2CB2+3040210]
+	GetHandleVerifier [0x00ED2BB4+2974420]
+	GetHandleVerifier [0x00C86A0A+565546]
+	GetHandleVerifier [0x00C85680+560544]
+	Ordinal0 [0x00B89A5C+1808988]
+	Ordinal0 [0x00B8E3A8+1827752]
+	Ordinal0 [0x00B8E495+1827989]
+	Ordinal0 [0x00B980A4+1867940]
+	BaseThreadInitThunk [0x75C6FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77AD7B5E+286]
+	RtlGetAppContainerNamedObjectPath [0x77AD7B2E+238]
+</msg>
+</errors>
+</robot>
